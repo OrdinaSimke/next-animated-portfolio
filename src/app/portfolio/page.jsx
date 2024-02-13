@@ -87,6 +87,9 @@ const Portfolio = () => {
                 </div>
               </div>
             ))}
+            <div
+              className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300`}
+            />
           </motion.div>
         </div>
       </div>
