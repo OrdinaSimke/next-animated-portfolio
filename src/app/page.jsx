@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Homepage = () => {
   return (
@@ -13,7 +14,7 @@ const Homepage = () => {
     >
       <div
         className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 overflow-y-auto"
-        style={{ scrollbarWidth: 'thin' }}
+        // style={{ scrollbarWidth: 'thin' }}
       >
         {/* Image container */}
         <div
@@ -38,10 +39,10 @@ const Homepage = () => {
           {/* Buttons */}
           <div className="lg:w-full flex gap-4 pb-12">
             <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
-              View My Work
+              <Link href="/portfolio">View My Work</Link>
             </button>
             <button className="p-4 rounded-lg ring-1 ring-black">
-              Contact Me
+              <Link href="/contact">Contact Me</Link>
             </button>
           </div>
         </div>

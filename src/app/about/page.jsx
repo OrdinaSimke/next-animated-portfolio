@@ -43,7 +43,7 @@ const About = () => {
       {/* CONTAINER */}
       <div
         className="h-full overflow-y-scroll lg:flex"
-        style={{ scrollbarWidth: 'thin' }}
+        // style={{ scrollbarWidth: 'thin' }}
         ref={containerRef}
       >
         {/* TEXT CONTAINER */}

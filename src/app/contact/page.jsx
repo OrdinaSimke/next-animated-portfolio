@@ -10,7 +10,10 @@ const Contact = () => {
       animate={{ y: '0%' }}
       transition={{ duration: 1 }}
     >
-      <div className="overflow-y-scroll" style={{ scrollbarWidth: 'thin' }}>
+      <div
+        className="overflow-y-scroll"
+        // style={{ scrollbarWidth: 'thin' }}
+      >
         Contact
       </div>
     </motion.div>
