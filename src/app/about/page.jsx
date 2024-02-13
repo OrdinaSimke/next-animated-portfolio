@@ -51,17 +51,20 @@ const About = () => {
           {/* BIOGRAPHY CONTAINER */}
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bol text-2xl">BIOGRAPHY</h1>
+            <h1 className="font-bol text-2xl">ABOUT ME</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              Nulla mollis augue sit amet risus mollis tempus. Pellentesque
-              magna mi, sollicitudin id purus efficitur, ullamcorper interdum
-              quam. Etiam tincidunt vitae ligula in ultrices. Nullam quis elit
-              mi. Duis facilisis mi non orci blandit lobortis.
+              Experienced Web Developer and Data Visualization Engineer adept in
+              all stages of advanced web development and data visualization.
+              Knowledgeable in designing, developing, testing and debugging
+              processes. Equipped with a diverse and promising skill-set.
+              Proficient in an assortment of technologies. Able to effectively
+              self-manage during independent projects, as well as collaborate in
+              a team setting.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              Vivamus in dolor pharetra augue dignissim maximus a quis elit.
+              Web Developer and Data Visualization Engineer
             </span>
             {/* BIOGRAPHY SIGN */}
             <div className="flex flex-row justify-between">
@@ -127,7 +130,7 @@ const About = () => {
             {/* EXPERIENCE LIST */}
             <motion.div
               className=""
-              initial={{ x: '-800px' }}
+              initial={{ x: '-500px' }}
               animate={isExperienceRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.5 }}
             >
