@@ -16,11 +16,14 @@ const Homepage = () => {
         style={{ scrollbarWidth: 'thin' }}
       >
         {/* Image container */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative">
+        <div
+          className="h-1/2 lg:h-full lg:w-1/2 relative"
+          style={{ minHeight: '300px' }}
+        >
           <Image src="/hero.png" alt="" fill className="object-contain" />
         </div>
         {/* Text container */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
+        <div className="lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* Title */}
           <h1 className="text-4xl md:text-6xl font-bold">
             Crafting Digital Experiences, Designing Tomorrow.
