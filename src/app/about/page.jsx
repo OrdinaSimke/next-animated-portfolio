@@ -30,6 +30,8 @@ const About = () => {
   const { scrollYProgress } = useScroll({ container: containerRef });
   const skillRef = useRef();
   const isSKillRefInView = useInView(skillRef, { margin: '-100px' });
+  const experienceRef = useRef();
+  const isExperienceRefInView = useInView(experienceRef, { margin: '-100px' });
 
   return (
     <motion.div
@@ -62,24 +64,30 @@ const About = () => {
               Vivamus in dolor pharetra augue dignissim maximus a quis elit.
             </span>
             {/* BIOGRAPHY SIGN */}
-            <div className="self-end pr-4">
-              <Image
-                src="/signature.svg"
-                alt=""
-                width={185}
-                height={77}
-                className=""
-              />
+            <div className="flex flex-row justify-between">
+              {' '}
+              <div className="h-12 w-12">
+                <ScrollSVG />
+              </div>
+              <div className="self-end pr-8">
+                <Image
+                  src="/signature.svg"
+                  alt=""
+                  width={185}
+                  height={77}
+                  className=""
+                />
+              </div>
             </div>
           </div>
           {/* BIOGRAPHY SCROLL SVG */}
-          <ScrollSVG />
+
           {/* SKILLS CONTAINER */}
           <div ref={skillRef} className="flex flex-col gap-12 justify-center">
             {/* SKILLS TITLE */}
             <motion.h1
               className="font-bol text-2xl"
-              initial={{ x: '-300px' }}
+              initial={{ x: '-400px' }}
               animate={isSKillRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.2 }}
             >
@@ -103,11 +111,26 @@ const About = () => {
           </div>
 
           {/* EXPERIENCE CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center pb-48">
+          <div
+            className="flex flex-col gap-12 justify-center pb-24"
+            ref={experienceRef}
+          >
             {/* EXPERIENCE TITLE */}
-            <h1 className="font-bol text-2xl">EXPERIENCE</h1>
+            <motion.h1
+              className="font-bol text-2xl"
+              initial={{ x: '-400px' }}
+              animate={isExperienceRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.3 }}
+            >
+              EXPERIENCE
+            </motion.h1>
             {/* EXPERIENCE LIST */}
-            <div className="">
+            <motion.div
+              className=""
+              initial={{ x: '-800px' }}
+              animate={isExperienceRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.5 }}
+            >
               {/* EXPERIENCE LIST ITEM */}
               <ExperienceItem
                 left={true}
@@ -130,7 +153,7 @@ const About = () => {
                 date={'2022'}
                 company={'Ordina'}
               />
-            </div>
+            </motion.div>
           </div>
         </div>
         {/* SVG CONTAINER */}

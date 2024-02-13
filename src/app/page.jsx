@@ -12,7 +12,7 @@ const Homepage = () => {
       transition={{ duration: 1 }}
     >
       <div
-        className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 overflow-y-scroll"
+        className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 overflow-y-auto"
         style={{ scrollbarWidth: 'thin' }}
       >
         {/* Image container */}
@@ -33,7 +33,7 @@ const Homepage = () => {
             commitment to excellence.
           </p>
           {/* Buttons */}
-          <div className="lg:w-full flex gap-4">
+          <div className="lg:w-full flex gap-4 pb-12">
             <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
               View My Work
             </button>
