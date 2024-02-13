@@ -5,7 +5,7 @@ import AnimatedChart from '@/components/animatedChart';
 import ExperienceItem from '@/components/experienceItem';
 import ScrollSVG from '@/components/scrollSVG';
 import Skill from '@/components/skill';
-import { motion, useScroll } from 'framer-motion';
+import { motion, useInView, useScroll } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 
@@ -28,6 +28,8 @@ const skillList = [
 const About = () => {
   const containerRef = useRef();
   const { scrollYProgress } = useScroll({ container: containerRef });
+  const skillRef = useRef();
+  const isSKillRefInView = useInView(skillRef, { margin: '-100px' });
 
   return (
     <motion.div
@@ -73,15 +75,27 @@ const About = () => {
           {/* BIOGRAPHY SCROLL SVG */}
           <ScrollSVG />
           {/* SKILLS CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center">
+          <div ref={skillRef} className="flex flex-col gap-12 justify-center">
             {/* SKILLS TITLE */}
-            <h1 className="font-bol text-2xl">SKILLS</h1>
+            <motion.h1
+              className="font-bol text-2xl"
+              initial={{ x: '-300px' }}
+              animate={isSKillRefInView ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+            >
+              SKILLS
+            </motion.h1>
             {/* SKILL LIST */}
             <div className="flex gap-4 flex-wrap">
               {skillList.map((skill, i) => (
-                <div key={i}>
+                <motion.div
+                  key={i}
+                  initial={{ x: '-800px' }}
+                  animate={isSKillRefInView ? { x: 0 } : { x: -800 }}
+                  transition={{ delay: i * 0.1 }}
+                >
                   <Skill text={skill} />
-                </div>
+                </motion.div>
               ))}
             </div>
             {/* SKILL SCROLL SVG */}

@@ -14,7 +14,7 @@ const AnimatedChart = ({ scrollYProgress }) => {
         >
           <g
             id="rs-cog50"
-            transform="translate(100 200)"
+            transform="translate(200 200)"
             fill="#cdb4db"
             stroke="#000"
             strokeWidth="2"
@@ -38,7 +38,7 @@ const AnimatedChart = ({ scrollYProgress }) => {
 
           <g
             id="rs-cog50"
-            transform="translate(150 200)"
+            transform="translate(250 200)"
             fill="#ffc8dd"
             stroke="#000"
             strokeWidth="2"
@@ -62,7 +62,7 @@ const AnimatedChart = ({ scrollYProgress }) => {
 
           <g
             id="rs-cog50"
-            transform="translate(200 200)"
+            transform="translate(300 200)"
             fill="#ffafcc"
             stroke="#000"
             strokeWidth="2"
