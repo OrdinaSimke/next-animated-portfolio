@@ -1,5 +1,6 @@
 'use client';
 
+import ScrollSVG from '@/components/scrollSVG';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -49,8 +50,9 @@ const Portfolio = () => {
         // style={{ scrollbarWidth: 'thin' }}
       >
         <div className="w-screen h-[calc(100vh-16rem)] flex items-center justify-center text-6xl sm:text-8xl text-center">
-          My works
+          My works <ScrollSVG />
         </div>
+
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div
             className="flex"
