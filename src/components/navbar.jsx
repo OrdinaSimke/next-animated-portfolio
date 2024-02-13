@@ -131,7 +131,7 @@ const Navbar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-2xl sm:text-4xl z-60"
+            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-60"
             style={{ zIndex: 60 }}
           >
             {links.map((link) => (
