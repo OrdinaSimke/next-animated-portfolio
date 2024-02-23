@@ -94,10 +94,13 @@ const Navbar = () => {
       </div>
       {/* Social */}
       <div className="flex gap-4 w-1/3 justify-end">
-        <Link href="/">
+        <Link
+          href="https://www.linkedin.com/in/simke-nys-73387167/"
+          target="_blank"
+        >
           <Image src="/linkedin.png" alt="" width={24} height={24} />
-        </Link>{' '}
-        <Link href="/">
+        </Link>
+        <Link href="https://github.com/OrdinaSimke" target="_blank">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
       </div>
